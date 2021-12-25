@@ -1,0 +1,50 @@
+/* HTML element CSS Properties */
+:root {
+    /* Setting a base font size of 10px give us easier rem calculations
+        Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+      */
+     display: block; /* CSS default value */
+     font-size: 17px;	
+     font-family: 'Karla', sans-serif;
+     background: linen; /* #ffcc80 */
+   }
+   /* end of HTML element */
+
+*,
+*::before,
+*::after  {
+     box-sizing: border-box;
+   }
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: royalblue;
+    text-align: center;
+}
+
+table {
+    border: 2px solid darkorchid;
+    width: 650px;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #8D8741;
+}
+
+td {
+    border-top: 1px solid darkorchid;
+}
+
+.centered {
+    text-align: center;
+}
+
+.code {
+    font-family: monospace;
+    background-color: rgb(199, 197, 197);
+}
