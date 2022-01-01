@@ -1,18 +1,26 @@
 let _ = {
-    clamp(number, lowerBound, upperBound) { 
-      if (number >= lowerBound && number <= upperBound) {
-        return number;
-      } else if (number < lowerBound) {
-        number = lowerBound;
-        return number;
-      } else if (number > upperBound) {
-        number = upperBound;
-        return number;
-      }
-    }
-}
+    clamp(num, lBound, uBound) {
+        return num < lBound ? lBound
+             : num > uBound ? uBound
+             : num;
+    },
 
+    inRange(num, start = 0, end) {
+        if (start > end) {
+          [end, start] = [start, end];
+        }
+        return num < start ? false
+             : num > end ? false
+             : num == end ? false
+             : true
+    },
 
+    words (stringToSplit) {
+        return stringToSplit.split(' ');
+    },
+
+    
+};
 
 
 // Do not write or modify code below this line.
