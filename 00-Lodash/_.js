@@ -19,7 +19,51 @@ let _ = {
         return stringToSplit.split(' ');
     },
 
-    
+    pad(strToPad, strLen) {
+        let padChars = strLen - strToPad.length;
+        if (padChars <= 0) {
+            return strToPad;
+        }
+        let padB = Math.floor(padChars / 2);
+        let padE = padChars - padB;
+        return ' '.repeat(padB) + strToPad + ' '.repeat(padE);
+    },
+
+    has(obj, key) {
+        if (obj.hasOwnProperty(key) && obj.key !== undefined) {
+            return true;
+        } else {
+            return false;
+        }
+    }, 
+
+    invert(obj) {
+        const newObj = {};
+        for (let key in obj) {      
+            newObj[obj[key]] = key;
+        }
+        return newObj;
+
+    },
+
+    findKey(obj, pfunc) {
+        for (let key in obj) {
+            if (pfunc(obj[key])) {
+                return key;
+            }
+        }
+        return undefined;  
+    },
+
+    drop(arr, num = 1) {
+        return arr.slice(num);
+    },
+
+    dropWhile(arr, pfunc) {
+        
+    }
+
+
 };
 
 
