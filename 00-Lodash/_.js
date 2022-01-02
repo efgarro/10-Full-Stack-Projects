@@ -60,7 +60,21 @@ let _ = {
     },
 
     dropWhile(arr, pfunc) {
-        
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (!pfunc(arr[i], i, arr)) {
+                return newArr = arr.slice(i);
+            }
+        }
+    },
+
+    chunk(arr, size = 1) {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i += size) {
+            newArr.push(arr.slice(i, (i + size)));
+        }
+        return newArr;
+
     }
 
 
