@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+    }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    }
+
+  
+/* Grid */
+
+  .column {
+    flex-basis: 100%;
+    }
+  
+@media screen and (min-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+  .centered-xy {
+    align-items: center;
+    justify-content: center;
+    }
+  .item-front {
+    width: 1200px;
+    height: 700px;  
+    }
+  .img-month {
+    width: 300px;
+    height: 200px;  
+  }
+  .tea-of-the-month {
+    width: 1000px;  
+    }
+  .locations {
+    width: 1200px;
+    height: 500px;  
+    gap: 40px;
+    }
+  .address {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .space-center {
+    justify-content: center;
+ 
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+  .column {
+    flex: 1;
+    }
+  ._25 {
+    flex: 2.5;
+    }
+  ._50 {
+    flex: 5.0;
+    }
+  ._75 {
+    flex: 7.5;
+    }
+  .align-center {
+    align-items: center;
+  }
+ 
+}
+
+/* Style */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: #ccc;
+    background: #000;
+    margin-bottom: 70px;
+    }
+  
+  .column, .item-front, .locations {
+    padding: 15px;
+    border: 1px solid #666;
+    margin: 5px 0;
+    background: #343436;
+    }
+  .locat-title {
+      position: absolute;
+      top: -50px;
+  }
+.address {
+    color: beige;
+    padding: 15px;
+    border: 1px solid #666;
+    margin: 5px 0;
+    background: #5aa8b3;
+    }
+.img-month {
+    padding: 0 15px;
+    }
+
+
+    main {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+  
+h1,
+h2 {
+    text-align: center;
+    }
