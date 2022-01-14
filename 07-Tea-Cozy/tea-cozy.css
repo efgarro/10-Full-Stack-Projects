@@ -124,16 +124,17 @@ body {
 .locations {
     background-image: url("0-Photos/img-locations-background.jpg");
     background-size: cover;
-}
-.column, {
+} /*
+.column {
     padding: 15px;
     border: 1px solid #666;
     margin: 5px 0;
     background: #343436;
-    }
+    } */
 .locat-title {
       position: absolute;
-      top: -50px;
+      left: 7co0px;
+      top: -100px;
   }
 .address {
     color: beige;
@@ -153,6 +154,7 @@ main {
   
 h1,
 h2,
+h3,
 h4 {
     text-align: center;
     }
