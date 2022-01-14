@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-size: 16px;
     }
   *,
   *:before,
@@ -15,7 +16,12 @@ html {
     }
   
 @media screen and (min-width: 800px) {
-  .container {
+  .container-vp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+  .container-cols {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,13 +30,45 @@ html {
     align-items: center;
     justify-content: center;
     }
-  .item-front {
+  .logo {
+    height: 50px;    
+    }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+    }
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    width: 11rem;
+    text-align: center;  
+    }
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    }
+      
+  .frontrom {
     width: 1200px;
     height: 700px;  
-    }
+    } 
   .img-month {
     width: 300px;
     height: 200px;  
+    } 
+  .gap_20 {
+    gap: 20px;  
+    }
+  .gap_40 {
+    gap: 40px;  
+    }
+  .card-month {
+    width: 300px;
   }
   .tea-of-the-month {
     width: 1000px;  
@@ -38,21 +76,15 @@ html {
   .locations {
     width: 1200px;
     height: 500px;  
-    gap: 40px;
     }
   .address {
     position: relative;
     width: 300px;
     height: 300px;
-  }
+    }
   .space-center {
     justify-content: center;
  
-  }
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     }
   .column {
     flex: 1;
@@ -75,20 +107,31 @@ html {
 /* Style */
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.3em;
-    color: #ccc;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.375rem;
+    color: seashell;
     background: #000;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     }
-  
-  .column, .item-front, .locations {
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;    
+    }
+.frontrom {
+    background-image: url("0-Photos/img-mission-background.jpg");
+    background-size: cover;
+    }
+.locations {
+    background-image: url("0-Photos/img-locations-background.jpg");
+    background-size: cover;
+}
+.column, {
     padding: 15px;
     border: 1px solid #666;
     margin: 5px 0;
     background: #343436;
     }
-  .locat-title {
+.locat-title {
       position: absolute;
       top: -50px;
   }
@@ -98,18 +141,18 @@ body {
     border: 1px solid #666;
     margin: 5px 0;
     background: #5aa8b3;
-    }
+    } 
 .img-month {
-    padding: 0 15px;
+    padding: 0 0px;
     }
 
-
-    main {
+main {
     max-width: 1200px;
     margin: 0 auto;
     }
   
 h1,
-h2 {
+h2,
+h4 {
     text-align: center;
     }

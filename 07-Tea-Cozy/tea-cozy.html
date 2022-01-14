@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="tea-cozy.css" type="text/css" />
 </head>
   <body>
-    <div class="row">
+    <div class="container-vp">
       <div class="column">
-        Navbar
+        <img class="logo" src="0-Photos/img-tea-cozy-logo.jpg" alt="">
+      </div>
+      <div >
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#mission">Mission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tea-of-the-month">Featured-Tea</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#locations">Locations</a>
+        </li>
+      </ul>
       </div>
     </div>
 <!--
@@ -21,8 +34,8 @@
 
   -->
 
-    <div class="container centered-xy">
-      <div class="container centered-xy item-front ">
+    <div class="container-vp centered-xy">
+      <div id="mission" class="container-cols centered-xy frontrom ">
           <div class="column">
             <h2>Our Mission</h2>
             <h4>...Sustainability... </h4>
@@ -30,27 +43,40 @@
       </div>
     </div>    
     
-    <div class="container centered-xy">
-      <div class="container tea-of-the-month">
-        <div class="column">
+    <div class="container-vp centered-xy">
+      <div id="tea-of-the-month" class="container-cols tea-of-the-month">
+        <div>
         <h2>Tea of the Month</h2>
         <h4>What's Steeping at the Tea Cosy?</h4>
-        <div class="container space-center">
-          <div style="padding: 0 10px">
-          <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+        <div class="container-cols space-center gap_20">
+          <div class="card-month">
+            <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
             <h4>Bedford Bizarre</h4> 
           </div>
-          <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
-          <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
-          <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
-          <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+          <div class="card-month">
+            <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+            <h4>Bedford Bizarre</h4> 
+          </div>
+          <div class="card-month">
+            <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+            <h4>Bedford Bizarre</h4> 
+          </div>
+          <div class="card-month">
+            <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+            <h4>Bedford Bizarre</h4> 
+          </div>
+          <div class="card-month">
+            <img class="img-month" src="0-Photos/img-bedford-bizarre.jpg" alt="">
+            <h4>Bedford Bizarre</h4> 
+          </div>
+        
         </div>
         </div>
       </div>
     </div>
 
-    <div class="container centered-xy">
-      <div class="container centered-xy locations">
+    <div class="container-vp centered-xy">
+      <div id="locations" class="container-cols centered-xy locations gap_40">
           <div class="address">
             <h2>Our Mission</h2>
             <h4>...Sustainability... </h4>
@@ -65,6 +91,17 @@
           </div>
       </div>
     </div>    
+    <div class="container-vp centered-xy">
+      <div class="contact">
+        <h2>Contact</h2>
+        <h4>...address line 1... </h4>
+        <h4>...address line 2... </h4>
+      </div>
+    </div>    
+    <div class="container-vp">
+      <h4>...copyright... </h4>
+    </div>    
+
 
   </body>
 </html>
