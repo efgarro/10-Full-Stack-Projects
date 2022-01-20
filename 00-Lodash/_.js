@@ -1,22 +1,23 @@
 let _ = {
     clamp(num, lBound, uBound) {
-        return num < lBound ? lBound
-             : num > uBound ? uBound
-             : num;
+        return num < lBound ? lBound : num > uBound ? uBound : num;
     },
 
     inRange(num, start = 0, end) {
         if (start > end) {
-          [end, start] = [start, end];
+            [end, start] = [start, end];
         }
-        return num < start ? false
-             : num > end ? false
-             : num == end ? false
-             : true
+        return num < start
+            ? false
+            : num > end
+            ? false
+            : num == end
+            ? false
+            : true;
     },
 
-    words (stringToSplit) {
-        return stringToSplit.split(' ');
+    words(stringToSplit) {
+        return stringToSplit.split(" ");
     },
 
     pad(strToPad, strLen) {
@@ -26,7 +27,7 @@ let _ = {
         }
         let padB = Math.floor(padChars / 2);
         let padE = padChars - padB;
-        return ' '.repeat(padB) + strToPad + ' '.repeat(padE);
+        return " ".repeat(padB) + strToPad + " ".repeat(padE);
     },
 
     has(obj, key) {
@@ -35,15 +36,14 @@ let _ = {
         } else {
             return false;
         }
-    }, 
+    },
 
     invert(obj) {
         const newObj = {};
-        for (let key in obj) {      
+        for (let key in obj) {
             newObj[obj[key]] = key;
         }
         return newObj;
-
     },
 
     findKey(obj, pfunc) {
@@ -52,7 +52,7 @@ let _ = {
                 return key;
             }
         }
-        return undefined;  
+        return undefined;
     },
 
     drop(arr, num = 1) {
@@ -63,7 +63,7 @@ let _ = {
         let newArr = [];
         for (let i = 0; i < arr.length; i++) {
             if (!pfunc(arr[i], i, arr)) {
-                return newArr = arr.slice(i);
+                return (newArr = arr.slice(i));
             }
         }
     },
@@ -71,15 +71,12 @@ let _ = {
     chunk(arr, size = 1) {
         let newArr = [];
         for (let i = 0; i < arr.length; i += size) {
-            newArr.push(arr.slice(i, (i + size)));
+            newArr.push(arr.slice(i, i + size));
         }
         return newArr;
-
-    }
-
-
+    },
 };
 
-
+module.exports = { drop, chunk };
 // Do not write or modify code below this line.
 module.exports = _;
