@@ -1,24 +1,7 @@
 const prompt = require("prompt-sync")({ sigint: true });
+const { Field } = require("./1-fyhClass");
 
-const hat = "^";
-const hole = "O";
-const fieldCharacter = "░";
-const pathCharacter = "*";
+let anArray = Field.generateField();
+const myField = new Field(anArray);
+myField.playFYH();
 
-class Field {
-    constructor(twoDArr) {}
-
-    print() {
-
-    }
-
-    static generateField() {
-        
-    }
-}
-
-const myField = new Field([
-    ["*", "░", "O"],
-    ["░", "O", "░"],
-    ["░", "^", "░"],
-]);
