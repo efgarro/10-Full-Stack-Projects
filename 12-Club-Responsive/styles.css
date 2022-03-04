@@ -2,8 +2,10 @@
 
 :root {
     --ff-heading: Rockwell Extra Bold, Rockwell Bold, monospace;
-    --ff-paragraph: Georgia, Times, Times New Roman, serif;
-    --ff-secondary: Courier;
+    --ff-subheading: Quicksand, sans-serif;
+    --ff-paragraph: Calibri, Georgia, Times, Times New Roman, serif;
+    --ff-code: Courier;
+    background-color: rgba(102, 158, 101, 0.884);
 }
 
 /* Begining of Andy Bell Reset.css */
@@ -91,11 +93,17 @@ select {
     align-items: center; */
     padding: clamp(1.09rem,1rem + .47vw,1.33rem) 0;
 }
+
+#intro {
+    padding: clamp(1.09rem,1rem + .47vw,1.33rem) 0;
+    /* height: 500px; */
+}
+
 @media (min-width: 668px) {
-    .wrapper {
+    .flex-wrapper {
         display: flex;
         justify-content: space-between;
-        width: clamp(16rem, 93vw, 75rem);
+        width: clamp(16rem, 85vw, 75rem);
         margin-left: auto;
         margin-right: auto;
         padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
@@ -103,7 +111,36 @@ select {
         /* background: lightblue; */
         /* position: relative; */
     }
+    .grid-wrapper {
+        width: clamp(16rem, 85vw, 75rem);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+        padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+        /* background: lightblue; */
+        /* position: relative; */
+    }
+    .back-lpink {
+        background-color: lightblue;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* grid-template-rows: repeat(4, 100px); */
+        gap: 10px;
+        justify-items: center;
+        /* height: 500px;
+        aspect-ratio: 1; */
+    }
+    .item {
+        width: 90%;
+        aspect-ratio: 1 / 1.25;
+        background: grey;
+        /* overflow: hidden; */
+    }
 }
+
+
 /* MODULE RULES */
 
 /* Navbar Module */
@@ -140,6 +177,7 @@ select {
 
     /* typography */
     font-family: var(--ff-heading);
+    font-weight: 700;
 }
 .nav-primary > li {
     list-style-type: none;
