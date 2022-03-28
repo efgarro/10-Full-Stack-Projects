@@ -1,3 +1,17 @@
+/* BASE RULES */
+
+:root {
+  --ff-heading: Rockwell Extra Bold, Rockwell Bold, monospace;
+  --ff-subheading: Quicksand, sans-serif;
+  --ff-paragraph: Calibri, Georgia, Times, Times New Roman, serif;
+  --ff-code: Courier;
+  --c-header: rgb(0, 128, 128); /* hsla(104, 100, 87, 0.81);*/
+  --c-celebrate: rgb(255, 160, 122);
+  background-color: #fff;
+}
+
+/* Begining of Andy Bell Reset.css */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -20,8 +34,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul /* [role="list"], */
+ol[role="list"] {
   list-style: none;
 }
 
@@ -60,9 +74,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -72,13 +86,116 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* End of Andy Bell Reset.css */
 
+/* LAYOUT RULES */
 
-/* body {
-  background: burlywood;
-} */
-.scale {
-  display: flex;
-  justify-items: center;
-  width: 250px;
+#header {
+  /* box-model */
+  /* padding: clamp(1.09rem, 1rem + 0.47vw, 1.33rem) 0; */
+  /* background: var(--c-header); */
+}
+
+#coverPic {
+}
+
+.coverPic__img {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  #header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* gap: 10px; */
+  }
+  .header__left {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #80b8be;
+  }
+  .header__right {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #fff;
+  }
+  .header__wrapper {
+    /* display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: clamp(16rem, 85vw, 75rem);
+    height: 4.5rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem); */
+    background: #fff;
+    /* background: lightblue; */
+    /* position: relative; */
+  }
+  /* .coverPic__wrapper {
+    width: clamp(16rem, 85vw, 75rem);
+  } */
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 2.483 / 1;
+    /* height: 65vh; */
+    object-fit: cover;
+  }
+}
+
+/* MODULE RULES */
+
+/* Navbar Module */
+
+@media (min-width: 800px) {
+  /* .toggle {
+        display: none;
+    } */
+  .nav__logo {
+    width: 243px;
+    background-color: #80b8be;
+  }
+  .nav__logo > h1 {
+    padding: 0.75rem 0;
+    font-family: var(--ff-heading);
+    color: #fff;
+    text-align: center;
+  }
+  .nav__menu {
+    /* display */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    /* positioning */
+    position: static;
+    /* box-model */
+    margin: 0;
+    padding: 1rem;
+    /* background-color: var(--c-header); */
+
+    font-family: var(--ff-subheading);
+    font-weight: 400;
+  }
+  .nav__menu > li {
+    text-align: center;
+    list-style-type: none;
+    width: 9rem;
+  }
+  .nav__menu > li > a {
+    color: #767676;
+    text-decoration: none;
+  }
+}
+
+/* coverPic Module */
+
+@media (min-width: 800px) {
+  .coverPic {
+  }
 }
