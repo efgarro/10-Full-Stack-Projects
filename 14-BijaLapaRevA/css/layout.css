@@ -1,0 +1,59 @@
+/* LAYOUT RULES */
+
+#header {
+  /* box-model */
+  /* padding: clamp(1.09rem, 1rem + 0.47vw, 1.33rem) 0; */
+  /* background: var(--c-header); */
+}
+
+#coverPic {
+}
+
+.coverPic__img {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  #header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* gap: 10px; */
+  }
+  .header__left {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #80b8be;
+  }
+  .header__right {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #fff;
+  }
+  .header__wrapper {
+    /* display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: clamp(16rem, 85vw, 75rem);
+    height: 4.5rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem); */
+    background: #fff;
+    /* background: lightblue; */
+    /* position: relative; */
+  }
+  /* .coverPic__wrapper {
+    width: clamp(16rem, 85vw, 75rem);
+  } */
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 2.483 / 1;
+    /* height: 65vh; */
+    object-fit: cover;
+  }
+}

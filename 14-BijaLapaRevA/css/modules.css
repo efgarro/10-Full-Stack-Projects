@@ -1,0 +1,51 @@
+/* MODULE RULES */
+
+/* Navbar Module */
+
+@media (min-width: 800px) {
+  /* .toggle {
+        display: none;
+    } */
+  .nav__logo {
+    width: 243px;
+    background-color: #80b8be;
+  }
+  .nav__logo > h1 {
+    padding: 0.75rem 0;
+    font-family: var(--ff-heading);
+    color: #fff;
+    text-align: center;
+  }
+  .nav__menu {
+    /* display */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    /* positioning */
+    position: static;
+    /* box-model */
+    margin: 0;
+    padding: 1rem;
+    /* background-color: var(--c-header); */
+
+    font-family: var(--ff-subheading);
+    font-weight: 400;
+  }
+  .nav__menu > li {
+    text-align: center;
+    list-style-type: none;
+    width: 9rem;
+  }
+  .nav__menu > li > a {
+    color: #767676;
+    text-decoration: none;
+  }
+}
+
+/* coverPic Module */
+
+@media (min-width: 800px) {
+  .coverPic {
+  }
+}
