@@ -1,22 +1,28 @@
 /* MODULE RULES */
 
-/* Navbar Module */
 
-@media (min-width: 800px) {
+/* Navbar Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
   /* .toggle {
         display: none;
     } */
-  .nav__logo {
+  .navbar--logo {
     width: 243px;
     background-color: #80b8be;
   }
-  .nav__logo > h1 {
+  .navbar--logo > h1 {
     padding: 0.75rem 0;
     font-family: var(--ff-heading);
     color: #fff;
     text-align: center;
   }
-  .nav__menu {
+  .navbar--menu {
     /* display */
     display: flex;
     flex-direction: row;
@@ -32,12 +38,12 @@
     font-family: var(--ff-subheading);
     font-weight: 400;
   }
-  .nav__menu > li {
+  .navbar--menu > li {
     text-align: center;
     list-style-type: none;
     width: 9rem;
   }
-  .nav__menu > li > a {
+  .navbar--menu > li > a {
     color: #767676;
     text-decoration: none;
   }
@@ -45,7 +51,7 @@
 
 /* coverPic Module */
 
-@media (min-width: 800px) {
+@media (min-width: 992px) {
   .coverPic {
   }
 }

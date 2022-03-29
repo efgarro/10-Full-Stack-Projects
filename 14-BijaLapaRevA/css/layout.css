@@ -1,5 +1,7 @@
 /* LAYOUT RULES */
 
+/* Mobile Screen (Portrait) Rules <576px */
+
 #header {
   /* box-model */
   /* padding: clamp(1.09rem, 1rem + 0.47vw, 1.33rem) 0; */
@@ -7,6 +9,7 @@
 }
 
 #coverPic {
+  
 }
 
 .coverPic__img {
@@ -15,22 +18,25 @@
   object-fit: cover;
 }
 
-@media (min-width: 800px) {
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
   #header {
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
     /* gap: 10px; */
   }
-  .header__left {
+  .header--left {
     width: clamp(12rem, 7.5vw, 40rem);
     background: #80b8be;
   }
-  .header__right {
+  .header--right {
     width: clamp(12rem, 7.5vw, 40rem);
     background: #fff;
   }
-  .header__wrapper {
+  .header--center {
     /* display */
     display: flex;
     justify-content: space-between;
