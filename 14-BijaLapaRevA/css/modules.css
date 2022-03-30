@@ -105,7 +105,7 @@
     color: #767676;
     text-decoration: none;
   }
-  .navbar--hamIcon {
+  .navbar--toggle {
     display: none;
   }
 }
