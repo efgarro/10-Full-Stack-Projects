@@ -1,0 +1,119 @@
+/* MODULE RULES */
+
+@import url(/css/navbar.css);
+
+/* Navbar Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+@media (max-width: 576px) {
+  .navbar--logo {
+    width: 10rem;
+    height: 100%;
+  }
+  .navbar--logo > h1 {
+    padding: 1.15rem;
+    font-family: var(--ff-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+  }
+  .navbar--menu {
+    /* display */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    /* justify-content: space-evenly; */
+    /* positioning */
+    position: fixed;
+    /* box-model */
+    margin: 0;
+    padding: 5rem 1rem;
+    /* background-color: var(--c-header); */
+    inset: 0 0 0 50%;
+    background-color: hsl(0 0% 100% / 0.6);
+    backdrop-filter: blur(1rem);
+    font-family: var(--ff-subheading);
+    font-weight: 400;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  .navbar--menu[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  .navbar--menu > li {
+    text-align: left;
+    list-style-type: none;
+    width: 9rem;
+  }
+  .navbar--menu > li > a {
+    color: #353535;
+    text-decoration: none;
+  }
+  .navbar--toggle {
+    position: absolute;
+    background-color: transparent;
+    background: url(/img/hamburger_icon.svg);
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 1.35rem;
+    right: 1.5rem;
+  }
+  .navbar--toggle[data-visible="true"] {
+    background: url(/img/close.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  /* .toggle {
+        display: none;
+    } */
+  .navbar--logo {
+    width: 243px;
+    background-color: #80b8be;
+  }
+  .navbar--logo > h1 {
+    padding: 0.75rem 0;
+    font-family: var(--ff-heading);
+    color: #fff;
+    text-align: center;
+  }
+  .navbar--menu {
+    /* display */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    /* positioning */
+    position: static;
+    /* box-model */
+    margin: 0;
+    padding: 1rem;
+    /* background-color: var(--c-header); */
+
+    font-family: var(--ff-subheading);
+    font-weight: 400;
+  }
+  .navbar--menu > li {
+    text-align: center;
+    list-style-type: none;
+    width: 9rem;
+  }
+  .navbar--menu > li > a {
+    color: #767676;
+    text-decoration: none;
+  }
+  .navbar--toggle {
+    display: none;
+  }
+}
+
+/* coverPic Module */
+/* 
+@media (min-width: 992px) {
+  .coverPic {
+  }
+} */

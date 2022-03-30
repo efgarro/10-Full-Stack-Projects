@@ -1,0 +1,29 @@
+/* Header Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+/* @media (max-width: 576px) {
+  
+} */
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  #subHeader {
+    height: 240px;
+    margin-top: 2.5rem;
+    background: #fff;
+  }
+  .subHeader--content {
+    justify-content: space-between;
+  }
+
+  .subHeader--box {
+    background-color: hsla(0, 0%, 77%, 0.25);
+    width: 25.25rem;
+    height: 80%;
+  }
+  .subHeader--logo {
+    width: 17.5rem;
+    height: 100%;
+  }
+}

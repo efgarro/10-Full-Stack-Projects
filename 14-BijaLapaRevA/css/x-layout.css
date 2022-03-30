@@ -1,0 +1,141 @@
+/* LAYOUT RULES */
+
+/* Mobile Screen (Portrait) Rules <576px */
+
+@media (max-width: 576px) {
+  #header {
+    height: 4.5rem;
+  }
+  .header--left {
+    display: none;
+  }
+  .header--right {
+    display: none;
+  }
+  .header--center {
+    /* display */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: 100%;
+    background: #80b8be;
+  }
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+  }
+}
+/* #coverPic {
+  
+} */
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  #introCard {
+    margin-top: 7.5rem;
+    height: 31.25rem;
+  }
+  .l-flexRow {
+    display: flex;
+    flex-direction: row;
+  }
+  .l-flexCol {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .l-wrapper {
+    /* background: #80b8be; */
+    width: clamp(16rem, 85vw, 75rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #header {
+    height: 4.5rem;
+  }
+  .header--left {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #80b8be;
+  }
+  .header--right {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #fff;
+  }
+  .header--center {
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: clamp(16rem, 85vw, 75rem);
+    background: #fff;
+  }
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 2.483 / 1;
+    object-fit: cover;
+  }
+  #subHeader {
+    height: 240px;
+    margin-top: 2.5rem;
+    background: #fff;
+  }
+  .subHeader--content {
+    justify-content: space-between;
+  }
+
+  .subHeader--box {
+    background-color: hsla(0, 0%, 77%, 0.25);
+    width: 25.25rem;
+    height: 80%;
+  }
+  .subHeader--logo {
+    width: 17.5rem;
+    height: 100%;
+  }
+  .introCard--title {
+    display: none;
+  }
+  .introCard--contentStart {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.75rem;
+    border: 1px solid red;
+  }
+  .introCard--contentCenter {
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+    border: 1px solid red;
+  }
+  .introCard--contentEnd {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3.75rem;
+    border: 1px solid red;
+  }
+  .introCard--titleBox {
+    height: 375px;
+    aspect-ratio: 1 / 2.75;
+    border: 1px solid lightblue;
+  }
+  .introCard--picPort {
+    height: 500px;
+    aspect-ratio: 1 / 1.5;
+    border: 1px solid lightblue;
+  }
+  .introCard--picLand {
+    height: 333px;
+    aspect-ratio: 1.5 / 1;
+    border: 1px solid lightblue;
+  }
+}

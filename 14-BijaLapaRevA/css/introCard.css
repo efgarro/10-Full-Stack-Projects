@@ -1,0 +1,51 @@
+/* Header Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+/* @media (max-width: 576px) {
+  
+} */
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  #introCard {
+    margin-top: 7.5rem;
+    height: 31.25rem;
+  }
+  .introCard--title {
+    display: none;
+  }
+  .introCard--contentStart {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.75rem;
+    border: 1px solid red;
+  }
+  .introCard--contentCenter {
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+    border: 1px solid red;
+  }
+  .introCard--contentEnd {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3.75rem;
+    border: 1px solid red;
+  }
+  .introCard--titleBox {
+    height: 375px;
+    aspect-ratio: 1 / 2.75;
+    border: 1px solid lightblue;
+  }
+  .introCard--picPort {
+    height: 500px;
+    aspect-ratio: 1 / 1.5;
+    border: 1px solid lightblue;
+  }
+  .introCard--picLand {
+    height: 333px;
+    aspect-ratio: 1.5 / 1;
+    border: 1px solid lightblue;
+  }
+}
