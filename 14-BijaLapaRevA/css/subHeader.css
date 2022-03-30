@@ -1,9 +1,30 @@
 /* Header Module */
 /* Mobile Screen (Portrait) Rules <576px */
 
-/* @media (max-width: 576px) {
-  
-} */
+@media (max-width: 576px) {
+  .subHeader--content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .subHeader--content {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subHeader--logo {
+    width: 15rem;
+    margin-top: 2rem;
+    order: -1;
+  }
+  .subHeader--logo > img {
+    margin: auto 0;
+  }
+  .subHeader--box {
+    background-color: hsla(0, 0%, 77%, 0.25);
+    width: 15rem;
+    aspect-ratio: 1 / 0.5;
+  }
+}
 
 /* Large Screen Rules >= 992px */
 
@@ -20,7 +41,7 @@
   .subHeader--box {
     background-color: hsla(0, 0%, 77%, 0.25);
     width: 25.25rem;
-    height: 80%;
+    height: 60%;
   }
   .subHeader--logo {
     width: 17.5rem;

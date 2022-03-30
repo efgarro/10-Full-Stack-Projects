@@ -10,6 +10,7 @@
     padding: 1.15rem;
     font-family: var(--ff-heading);
     font-size: 1.5rem;
+    font-weight: 700;
     color: #fff;
     text-align: center;
   }
@@ -24,7 +25,6 @@
     /* box-model */
     margin: 0;
     padding: 5rem 1rem;
-    /* background-color: var(--c-header); */
     inset: 0 0 0 50%;
     background-color: hsl(0 0% 100% / 0.6);
     backdrop-filter: blur(1rem);
