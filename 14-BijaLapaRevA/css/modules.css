@@ -32,6 +32,12 @@
     backdrop-filter: blur(1rem);
     font-family: var(--ff-subheading);
     font-weight: 400;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  .navbar--menu[data-visible="true"] {
+    transform: translateX(0%);
   }
   .navbar--menu > li {
     text-align: left;
@@ -42,13 +48,19 @@
     color: #353535;
     text-decoration: none;
   }
-  .navbar--hamIcon {
+  .navbar--toggle {
     position: absolute;
+    background-color: transparent;
     background: url(/img/hamburger_icon.svg);
     width: 2rem;
     aspect-ratio: 1;
     top: 1.35rem;
     right: 1.5rem;
+  }
+  .navbar--toggle[data-visible="true"] {
+    background: url(/img/close.svg);
+    background-repeat: no-repeat;
+    
   }
 }
 
@@ -99,8 +111,8 @@
 }
 
 /* coverPic Module */
-
+/* 
 @media (min-width: 992px) {
   .coverPic {
   }
-}
+} */
