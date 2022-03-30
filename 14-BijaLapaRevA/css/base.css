@@ -8,8 +8,8 @@
   --c-BLblue: #80b8be;
   --c-BLgreen: #b0baa3;
   --c-BLred: #e41e3c;
-  --c-White: #ffffff
-  background-color: var(--c-White);
+  --c-white: #ffffff
+  background-color: var(--c-white);
 }
 
 /* Begining of Andy Bell Reset.css */
