@@ -1,0 +1,20 @@
+/*Footer Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+@media (max-width: 576px) {
+  #footer {
+    height: 6.5rem;
+    margin-top: 2rem;
+    background-color: var(--c-BLblue);
+  }
+}
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  #footer {
+    height: 6.5rem;
+    margin-top: 10rem;
+    background-color: var(--c-BLblue);
+  }
+}
