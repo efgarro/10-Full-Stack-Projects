@@ -1,13 +1,15 @@
 /* BASE RULES */
 
 :root {
-  --ff-heading: Rockwell Extra Bold, Rockwell Bold, monospace;
+  --ff-heading: Quicksand, sans-serif; /*Rockwell Extra Bold, Rockwell Bold, monospace;*/
   --ff-subheading: Quicksand, sans-serif;
   --ff-paragraph: Calibri, Georgia, Times, Times New Roman, serif;
   --ff-code: Courier;
-  --c-header: rgb(0, 128, 128); /* hsla(104, 100, 87, 0.81);*/
-  --c-celebrate: rgb(255, 160, 122);
-  background-color: #fff;
+  --c-BLblue: #80b8be;
+  --c-BLgreen: #b0baa3;
+  --c-BLred: #e41e3c;
+  --c-White: #ffffff
+  background-color: var(--c-White);
 }
 
 /* Begining of Andy Bell Reset.css */

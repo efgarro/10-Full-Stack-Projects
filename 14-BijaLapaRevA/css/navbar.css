@@ -66,11 +66,12 @@
 @media (min-width: 992px) {
   .navbar--logo {
     width: 243px;
-    background-color: #80b8be;
+    background-color: var(--c-BLblue);
   }
   .navbar--logo > h1 {
     padding: 0.75rem 0;
     font-family: var(--ff-heading);
+    font-weight: 700;
     color: #fff;
     text-align: center;
   }

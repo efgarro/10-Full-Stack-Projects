@@ -19,7 +19,7 @@
     /* positioning */
     /* box-model */
     width: 100%;
-    background: #80b8be;
+    background: var(--c-BLblue);
   }
   .coverPic__img {
     width: 100%;
@@ -40,7 +40,7 @@
   }
   .header--right {
     width: clamp(12rem, 7.5vw, 40rem);
-    background: #fff;
+    /* background: #fff; */
   }
   .header--center {
     justify-content: space-between;
@@ -48,7 +48,7 @@
     /* positioning */
     /* box-model */
     width: clamp(16rem, 85vw, 75rem);
-    background: #fff;
+    /* background: #fff; */
   }
   .coverPic__img {
     width: 100%;
