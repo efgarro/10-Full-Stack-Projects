@@ -8,6 +8,8 @@ export const AppointmentForm = ({
   setDate,
   time,
   setTime,
+  contact,
+  setContact,
   contacts,
   handleSubmit,
 }) => {
@@ -18,7 +20,9 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
-  const handleContactPicker = () => {};
+  const handleContactPicker = (e) => {
+    setContact(e.target.value);
+  };
 
   return (
     <>
@@ -34,6 +38,7 @@ export const AppointmentForm = ({
         <input
           name="date"
           type="date"
+          min={getTodayString}
           placeholder="Date"
           value={date}
           onChange={(e) => setDate(e.target.value)}

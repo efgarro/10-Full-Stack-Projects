@@ -18,6 +18,13 @@ export const AppointmentsPage = ({ appoints, addAppoints, contacts }) => {
   const [time, setTime] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    addAppoints({
+      title: title,
+      date: date,
+      time: time,
+      contact: contact,
+      id: uuidv4(),
+    });
     /*
     Add contact info and clear data  
     */
@@ -29,11 +36,13 @@ export const AppointmentsPage = ({ appoints, addAppoints, contacts }) => {
         <h2>Add Appointment</h2>
         <AppointmentForm
           title={title}
-          setContact={setContact}
+          setTitle={setTitle}
           date={date}
           setDate={setDate}
           time={time}
           setTime={setTime}
+          contact={contact}
+          setContact={setContact}
           contacts={contacts}
           handleSubmit={handleSubmit}
         />
@@ -41,6 +50,7 @@ export const AppointmentsPage = ({ appoints, addAppoints, contacts }) => {
       <hr />
       <section>
         <h2>Appointments</h2>
+        {appoints && <TileList arrObjs={appoints} />}
       </section>
     </div>
   );

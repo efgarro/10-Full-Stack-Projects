@@ -25,7 +25,9 @@ function App() {
   const addContacts = (newPer) => {
     setContacts((prev) => [...prev, newPer]);
   };
-  const addAppoints = (title, contact, date, name) => {};
+  const addAppoints = (newAppoint) => {
+    setAppoints((prev) => [...prev, newAppoint])
+  };
 
   console.log("Hellow Bella");
   return (
