@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewTask from "../Presentational/NewTask";
 import TasksList from "../Presentational/TasksList";
+import { v4 as uuidv4 } from "uuid";
 
 export default function AppFunction() {
   // hook your code up here ;)
@@ -8,9 +9,11 @@ export default function AppFunction() {
   const [allTasks, setAllTasks] = useState([]);
 
   const handleChange = ({ target }) => {
+    console.log(target);
+    console.log(newTask);
     const { name, value } = target;
     setNewTask((prevNewTask) => {
-      return { ...prevNewTask, [name]: value, id: Date.now() };
+      return { ...prevNewTask, [name]: value, id: uuidv4() };
     });
 
     // this.setState((prevState) => ({

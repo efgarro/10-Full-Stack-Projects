@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NewTask from "../Presentational/NewTask";
 import TasksList from "../Presentational/TasksList";
+import { v4 as uuidv4 } from "uuid";
 
 export default class AppClass extends Component {
   constructor(props) {
@@ -16,12 +17,13 @@ export default class AppClass extends Component {
 
   handleChange({ target }) {
     const { name, value } = target;
+    console.log(uuidv4());
     this.setState((prevState) => ({
       ...prevState,
       newTask: {
         ...prevState.newTask,
         [name]: value,
-        id: Date.now(),
+        id: uuidv4(),
       },
     }));
   }

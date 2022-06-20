@@ -91,6 +91,7 @@
     font-weight: 400;
   }
   .navbar--menu > li {
+    align-self: center;
     text-align: center;
     list-style-type: none;
     width: 9rem;
