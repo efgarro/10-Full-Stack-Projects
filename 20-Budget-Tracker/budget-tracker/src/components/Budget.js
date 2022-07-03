@@ -10,6 +10,7 @@ export default function Budget({ budget }) {
 
   const handleEdit = (e) => {
     e.preventDefault();
+    console.log('dispatched');
     dispatch(editBudget({ category: budget.category, amount: amount }));
   };
 
