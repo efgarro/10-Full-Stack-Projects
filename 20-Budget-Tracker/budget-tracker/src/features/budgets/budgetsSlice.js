@@ -31,7 +31,6 @@ const budgetsSlice = createSlice({
     },
   },
 });
-console.log(budgetsSlice);
 
 
 export const selectBudgets = (state) => state.budgets;
