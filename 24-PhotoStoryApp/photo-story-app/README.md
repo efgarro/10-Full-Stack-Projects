@@ -1,12 +1,20 @@
-# Getting Started with Create React App
+# PhotoStory React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the Full Stack Designer Codecademy curriculum that completes Module 24 - Portafolio Project. The project however, was geared towards a feature of the 'Soy Costa Rica' Destination App, and the Unsplash API was used instead. All tasks and requirements were modified accordingly.
 
-## Available Scripts
+## React Router Paths
 
-In the project directory, you can run:
+```
+/home
+/search/????
+/guanacaste
+/jaco
+/monteverde
+/la-fortuna
+/puerto-viejo
+```
 
-### `npm start`
+### `npm start` {#custom-id}
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

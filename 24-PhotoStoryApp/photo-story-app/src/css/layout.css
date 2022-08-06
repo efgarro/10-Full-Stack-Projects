@@ -1,0 +1,28 @@
+/* LAYOUT RULES */
+
+/* Mobile Screen (Portrait) Rules <576px */
+
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  .l-flexRow {
+    display: flex;
+    flex-direction: row;
+  }
+  .l-flexCol {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .l-wrapper {
+    /* background: #80b8be; */
+    width: clamp(16rem, 85vw, 75rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    height: 100%;
+  }
+}
+
