@@ -43,7 +43,6 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 
 ## **CSS Style Guide**
 
-<p style="margin: 20px">
 ### ***Class Naming Convenction***
 Rules as recommended by SMACSS Style Guide 
 <br></br>
@@ -52,7 +51,7 @@ http://smacss.com/book/
 ```js
 .moduleName--subComponent
 ```
-</p>
+
 <br></br>
 
 ### ***Grouping Properties***
