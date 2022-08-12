@@ -1,6 +1,19 @@
 /* Header Module */
 /* Mobile Screen (Portrait) Rules <576px */
 
+/* Organizing Properties */
+/* by Kevin Powel */
+/* https://www.youtube.com/watch?v=3Y03OSNw6zo */
+
+/* display */
+/* positioning */
+/* box-model */
+/* typography*/
+/* manipulating */
+/* miscellaneous */
+
+
+
 @media (max-width: 576px) {
   #header {
     height: 4.5rem;

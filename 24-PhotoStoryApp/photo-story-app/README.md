@@ -1,8 +1,8 @@
-# PhotoStory React App
+# **PhotoStory React App**
 
 This project is part of the Full Stack Designer Codecademy curriculum that completes Module 24 - Portafolio Project. The project however, was geared towards a feature of the 'Soy Costa Rica' Destination App, and the Unsplash API was used instead. All tasks and requirements were modified accordingly.
 
-## React Router Paths
+## **React Router Paths**
 
 ```
 /home
@@ -41,10 +41,10 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
   - ContactForm
   - Footer
 
-## CSS Style Guide
+## **CSS Style Guide**
 
-### Class Naming Convenction
-
+<div style="margin: 20px">
+### ***Class Naming Convenction***
 Rules as recommended by SMACSS Style Guide 
 <br></br>
 http://smacss.com/book/
@@ -52,10 +52,10 @@ http://smacss.com/book/
 ```js
 .moduleName--subComponent
 ```
-
+</div>
 <br></br>
 
-### Grouping CSS Properties
+### ***Grouping Properties***
 
 
 As recommended by Kevin Powel
