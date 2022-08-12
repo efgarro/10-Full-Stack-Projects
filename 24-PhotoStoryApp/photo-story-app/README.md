@@ -43,7 +43,7 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 
 ## **CSS Style Guide**
 
-### ***Categorizing of Rules and Class Naming Convenction***
+### **Categorizing of Rules and Class Naming Convenction**
 
 As recommended by SMACSS Style Guide and Jonathan Snook's lecture.
 - http://smacss.com/book/
@@ -55,7 +55,7 @@ As recommended by SMACSS Style Guide and Jonathan Snook's lecture.
 ```
 
 
-### ***Organizing Class Properties***
+### **Organizing Class Properties**
 
 As recommended by Kevin Powel
 
