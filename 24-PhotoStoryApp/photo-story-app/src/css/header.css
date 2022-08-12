@@ -1,0 +1,58 @@
+/* Header Module */
+/* Mobile Screen (Portrait) Rules <576px */
+
+@media (max-width: 576px) {
+  .header {
+    height: 4.5rem;
+  }
+  .header--left {
+    display: none;
+  }
+  .header--right {
+    display: none;
+  }
+  .header--center {
+    /* display */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: 100%;
+    background: var(--c-BLblue);
+  }
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+  }
+}
+
+/* Large Screen Rules >= 992px */
+
+@media (min-width: 992px) {
+  .header {
+    height: 4.5rem;
+  }
+  .header--left {
+    width: clamp(12rem, 7.5vw, 40rem);
+    background: #80b8be;
+  }
+  .header--right {
+    width: clamp(12rem, 7.5vw, 40rem);
+    /* background: #fff; */
+  }
+  .header--center {
+    justify-content: space-between;
+    align-items: center;
+    /* positioning */
+    /* box-model */
+    width: clamp(16rem, 85vw, 75rem);
+    /* background: #fff; */
+  }
+  .coverPic__img {
+    width: 100%;
+    aspect-ratio: 2.483 / 1;
+    object-fit: cover;
+  }
+}

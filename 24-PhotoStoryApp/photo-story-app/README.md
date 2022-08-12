@@ -6,7 +6,7 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 
 ```
 /home
-/search/????
+/search/:hub
 /guanacaste
 /jaco
 /monteverde
@@ -14,14 +14,52 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 /puerto-viejo
 ```
 
-### `npm start` {#custom-id}
+## Identify State
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The search text the user has entered
+- Login Status
+- The list of photographs giving the region's ambience, look and feel.
+- The list of photographs giving the tico's mood for the week.
+- The list of photographs of people going about ordinary tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components
 
+- Home Page
+  - CoverPic
+  - HeaderOne
+  - AmbiencePics
+  - Footer
+<br></br>
+- Hub Page
+  - HeaderTwo
+  - HubDashboard
+  - AmbiencePics
+  - Footer
+<br></br>
+- Contact Page
+  - HeaderTwo
+  - ContactForm
+  - Footer
+
+
+### Organizing CSS Properties
+
+As recommended by Kevin Powel
+<br></br>
+https://www.youtube.com/watch?v=3Y03OSNw6zo
+
+- /* display */
+- /* positioning */
+- /* box-model */
+- /* typography*/
+- /* manipulating */
+- /* miscellaneous */
+
+
+
+
+<br></br>
+<br></br>
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
