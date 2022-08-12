@@ -43,23 +43,23 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 
 ## **CSS Style Guide**
 
-### ***Class Naming Convenction***
-Rules as recommended by SMACSS Style Guide 
-<br></br>
-http://smacss.com/book/
+### ***Categorizing of Rules and Class Naming Convenction***
+
+As recommended by SMACSS Style Guide and Jonathan Snook's lecture.
+- http://smacss.com/book/
+- https://www.youtube.com/watch?v=fAcW-wOFYjw
+
 
 ```js
 .moduleName--subComponent
 ```
 
-<br></br>
 
-### ***Grouping Properties***
-
+### ***Organizing Class Properties***
 
 As recommended by Kevin Powel
 
-https://www.youtube.com/watch?v=3Y03OSNw6zo
+- https://www.youtube.com/watch?v=3Y03OSNw6zo
 
 For example:
 ```css
