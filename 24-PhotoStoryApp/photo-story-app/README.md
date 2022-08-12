@@ -22,7 +22,7 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
 - The list of photographs giving the tico's mood for the week.
 - The list of photographs of people going about ordinary tasks.
 
-## Components
+## React Components
 
 - Home Page
   - CoverPic
@@ -41,25 +41,55 @@ This project is part of the Full Stack Designer Codecademy curriculum that compl
   - ContactForm
   - Footer
 
+## CSS Style Guide
 
-### Organizing CSS Properties
+### Class Naming Convenction
+
+Rules as recommended by SMACSS Style Guide 
+<br></br>
+http://smacss.com/book/
+
+```js
+.moduleName--subComponent
+```
+
+<br></br>
+
+### Grouping CSS Properties
+
 
 As recommended by Kevin Powel
-<br></br>
+
 https://www.youtube.com/watch?v=3Y03OSNw6zo
 
-- /* display */
-- /* positioning */
-- /* box-model */
-- /* typography*/
-- /* manipulating */
-- /* miscellaneous */
+For example:
+```css
+.navbar--menu {
+  /* display */
+  display: flex;
+  flex-direction: column;
 
-
-
-
+  /* positioning */
+  position: static;
+  
+  /* box-model */
+  margin: 0;
+  padding: 1rem;
+  
+  /* typography*/
+  font-family: var(--ff-subheading);
+  font-weight: 400;
+  
+  /* manipulating */
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+  
+  /* miscellaneous */
+  border-radius: 2px;
+}
+```
 <br></br>
-<br></br>
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
