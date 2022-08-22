@@ -31,25 +31,64 @@
 /* Large Screen Rules >= 992px */
 
 @media (min-width: 992px) {
-  .header {
-    height: 4.5rem;
+  .header-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    /* height: 100%; */
+    background: white;
+    box-shadow: 0 3px 10px -4px rgb(128 183 190)
   }
-  .header--left {
-    width: clamp(12rem, 7.5vw, 40rem);
-    background: #80b8be;
+
+  .header-wrapper--row {
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(16rem, 85vw, 75rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
   }
-  .header--right {
+
+  .header--logo {
+    width: 280px;
+    aspect-ratio: 4.84/1;
+    /* margin-left: auto; */
+    margin-right: auto;
+  }
+
+  .header--searchForm {
+    max-width: 260px;
+    display: flex;
+    margin: 0.3rem auto 0.3rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .header--searchForm button {
+    outline: none;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 0 0.35em 0.35em 0;
+    cursor: pointer;
+  }
+
+  /* .header--left {
     width: clamp(12rem, 7.5vw, 40rem);
-    /* background: #fff; */
   }
   .header--center {
     justify-content: space-between;
     align-items: center;
     /* positioning */
-    /* box-model */
-    width: clamp(16rem, 85vw, 75rem);
-    /* background: #fff; */
-  }
+  /* box-model */
+  /* width: clamp(16rem, 85vw, 75rem); */
+  /* background: #fff; */
+  /* } */
+  /* .header--right { */
+  /* width: clamp(12rem, 7.5vw, 40rem); */
+  /* background: #fff; */
+  /* } */
   .coverPic__img {
     width: 100%;
     aspect-ratio: 2.483 / 1;
