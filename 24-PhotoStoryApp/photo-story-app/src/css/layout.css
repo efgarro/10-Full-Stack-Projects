@@ -6,16 +6,16 @@
 /* Large Screen Rules >= 992px */
 
 @media (min-width: 992px) {
-  .l-flexRow {
+  .layout-flexRow {
     display: flex;
     flex-direction: row;
   }
-  .l-flexCol {
+  .layout-flexCol {
     display: flex;
     flex-direction: column;
   }
   
-  .l-wrapper {
+  .layout-wrapper {
     /* background: #80b8be; */
     width: clamp(16rem, 85vw, 75rem);
     margin-left: auto;
