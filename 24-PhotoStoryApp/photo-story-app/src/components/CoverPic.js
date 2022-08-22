@@ -6,7 +6,6 @@ export const CoverPic = () => {
   return (
     <section>
       <div>
-        <h1>Vista 3</h1>
         <img className="coverPic__img" src={vista} alt="" />
       </div>
     </section>
