@@ -1,0 +1,6 @@
+/* nodemon --watch */
+nodemon server.js
+nodemon --watch server.js --watch server/
+
+"start-dev": "webpack -w & nodemon --watch server.js --watch server/",
+    "start": "nodemon server.js",
