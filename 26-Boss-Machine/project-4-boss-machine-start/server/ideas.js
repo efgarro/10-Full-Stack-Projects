@@ -1,5 +1,5 @@
 const express = require("express");
-const minionsRouter = express.Router();
+const ideasRouter = express.Router();
 const {
   getAllFromDatabase,
   getFromDatabaseById,
@@ -7,24 +7,24 @@ const {
   updateInstanceInDatabase,
   deleteFromDatabasebyId,
 } = require("./db");
-module.exports = minionsRouter;
+module.exports = ideasRouter;
 
-minionsRouter.param("minionId", (req, res, next, id) => {
-  req.minionId = id;
+ideasRouter.param("ideasId", (req, res, next, id) => {
+  req.ideasId = id;
   next();
 });
 
-minionsRouter.get("/", (req, res, next) => {
-  const minionsArr = getAllFromDatabase("minions");
-  res.send(minionsArr);
+ideasRouter.get("/", (req, res, next) => {
+  const ideasArr = getAllFromDatabase("minions");
+  res.send(ideasArr);
 });
 
-minionsRouter.get("/:minionId", (req, res, next) => {
-  req.minionObj = getFromDatabaseById("minions", req.minionId);
+ideasRouter.get("/:ideasId", (req, res, next) => {
+  req.minionObj = getFromDatabaseById("minions", req.ideasId);
   res.send(req.minionObj);
 });
 
-minionsRouter.post("/", (req, res, next) => {
+ideasRouter.post("/", (req, res, next) => {
   const newMinion = req.body;
   const { name, title, salary } = newMinion;
   if (name && title && salary) {
@@ -38,17 +38,17 @@ minionsRouter.post("/", (req, res, next) => {
   }
 });
 
-minionsRouter.put("/:minionId", (req, res, next) => {
+ideasRouter.put("/:ideasId", (req, res, next) => {
   const updatedMinion = updateInstanceInDatabase("minions", req.body);
   res.send(updatedMinion);
 });
 
-minionsRouter.delete("/:minionId", (req, res, next) => {
-  const deletedMinion = deleteFromDatabasebyId("minions", req.minionId);
+ideasRouter.delete("/:ideasId", (req, res, next) => {
+  const deletedMinion = deleteFromDatabasebyId("minions", req.ideasId);
   res.send(deletedMinion);
 });
 
-minionsRouter.use((err, req, res, next) => {
+ideasRouter.use((err, req, res, next) => {
   const status = err.status || 500;
   console.log(`${err.status} ${err.message}`);
   res.status(status).send(err.message);
