@@ -9,28 +9,39 @@ const {
 } = require("./db");
 module.exports = ideasRouter;
 
-ideasRouter.param("ideasId", (req, res, next, id) => {
-  req.ideasId = id;
+ideasRouter.param("ideaId", (req, res, next, id) => {
+  req.ideaId = id;
   next();
 });
 
+const verifyIndex = (req, res, next) => {
+  const ideaIndex = getAllFromDatabase("ideas").findIndex(
+    (obj) => obj.id === req.ideaId
+  );
+  if (ideaIndex !== -1) {
+    next();
+  } else {
+    let newError = new Error("Non-Valid ID");
+    newError.status = 404;
+    next(newError);
+  }
+};
+
 ideasRouter.get("/", (req, res, next) => {
-  const ideasArr = getAllFromDatabase("minions");
+  const ideasArr = getAllFromDatabase("ideas");
   res.send(ideasArr);
 });
 
-ideasRouter.get("/:ideasId", (req, res, next) => {
-  req.minionObj = getFromDatabaseById("minions", req.ideasId);
-  res.send(req.minionObj);
+ideasRouter.get("/:ideaId", verifyIndex, (req, res, next) => {
+  req.ideaObj = getFromDatabaseById("ideas", req.ideaId);
+  res.send(req.ideaObj);
 });
 
 ideasRouter.post("/", (req, res, next) => {
-  const newMinion = req.body;
-  const { name, title, salary } = newMinion;
-  if (name && title && salary) {
-    console.log(newMinion);
-    addToDatabase("minions", newMinion);
-    res.send(newMinion);
+  const newIdea = req.body;
+  if (newIdea) {
+    addToDatabase("ideas", newIdea);
+    res.status(201).send(newIdea);
   } else {
     let newError = new Error("Must include name, title and salary!");
     newError.status = 404;
@@ -38,14 +49,14 @@ ideasRouter.post("/", (req, res, next) => {
   }
 });
 
-ideasRouter.put("/:ideasId", (req, res, next) => {
-  const updatedMinion = updateInstanceInDatabase("minions", req.body);
-  res.send(updatedMinion);
+ideasRouter.put("/:ideaId", verifyIndex, (req, res, next) => {
+  const updatedIdea = updateInstanceInDatabase("ideas", req.body);
+  res.send(updatedIdea);
 });
 
-ideasRouter.delete("/:ideasId", (req, res, next) => {
-  const deletedMinion = deleteFromDatabasebyId("minions", req.ideasId);
-  res.send(deletedMinion);
+ideasRouter.delete("/:ideaId", verifyIndex, (req, res, next) => {
+  deleteFromDatabasebyId("ideas", req.ideaId);
+  res.status(204).send();
 });
 
 ideasRouter.use((err, req, res, next) => {
