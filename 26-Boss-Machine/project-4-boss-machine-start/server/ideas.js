@@ -39,14 +39,8 @@ ideasRouter.get("/:ideaId", verifyIndex, (req, res, next) => {
 });
 
 ideasRouter.post("/", checkMillionDollarIdea, (req, res, next) => {
-  if (newIdea) {
-    addToDatabase("ideas", newIdea);
-    res.status(201).send(newIdea);
-  } else {
-    let newError = new Error("Must include name, title and salary!");
-    newError.status = 404;
-    next(newError);
-  }
+  addToDatabase("ideas", req.body);
+  res.status(201).send(req.body);
 });
 
 ideasRouter.put("/:ideaId", verifyIndex, (req, res, next) => {
@@ -61,6 +55,6 @@ ideasRouter.delete("/:ideaId", verifyIndex, (req, res, next) => {
 
 ideasRouter.use((err, req, res, next) => {
   const status = err.status || 500;
-  console.log(`${err.status} ${err.message}`);
+  console.log(`${status} ${err.message}`);
   res.status(status).send(err.message);
 });
